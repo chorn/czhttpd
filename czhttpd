@@ -20,7 +20,7 @@ for z in ${(SM)$(export)#*=}; do
         (PWD|_|HOME)
             continue;;
         (*)
-            unset ${z%=};;
+            unset ${z%=} >&/dev/null;;
     esac
 done
 
